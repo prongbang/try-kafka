@@ -1,12 +1,10 @@
-import com.prongbang.consumer.KafkaConsumer
+import com.prongbang.consumer.TryKafkaConsumer
+import io.github.cdimascio.dotenv.dotenv
 
 fun main(args: Array<String>) {
-    println("Hello World!")
+    // Load Environment
+    val dotenv = dotenv()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
-
-    val consumer = KafkaConsumer.newInstance()
+    val consumer = TryKafkaConsumer.newInstance(dotenv)
     consumer.run()
 }
