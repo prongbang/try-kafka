@@ -15,10 +15,10 @@ import org.elasticsearch.action.index.IndexRequest
 import org.elasticsearch.client.RestHighLevelClient
 import org.elasticsearch.client.RestClient
 
-class KafkaConsumer {
+class TryKafkaConsumer {
 
     companion object {
-        fun newInstance(): KafkaConsumer = KafkaConsumer()
+        fun newInstance(): TryKafkaConsumer = TryKafkaConsumer()
     }
 
     fun run() {
@@ -68,7 +68,6 @@ class KafkaConsumer {
                 consumer.commitAsync()
                 println("Indexed successfully")
             } catch (e: ElasticsearchException) {
-                // handle when something goes wrong.
                 println(e)
             }
         }
