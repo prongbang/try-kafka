@@ -12,4 +12,14 @@ brew install librdkafka
 
 ## 4. Run Test Consume
 
-## 5. Run Produce
+## 5. Run Producer
+
+## 6. Run Elastic Search
+
+## 7. Run Consumer
+
+## 8. Test Send Message
+
+## 9. Open Elastic
+
+http://localhost:9200/user-messages/_search?pretty
